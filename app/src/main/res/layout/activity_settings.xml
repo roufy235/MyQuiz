@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".controllers.SettingsActivity">
+
+    <RelativeLayout
+            android:id="@+id/navSettings"
+            android:background="@color/appMainColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageButton
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="settingsGoBack"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/rounded_app_colorr_white"
+                android:src="@drawable/ic_arrow_back_app_color_24dp"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/settings"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                style="@style/customBoldCoiny"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+            android:layout_below="@id/navSettings"
+            android:layout_width="match_parent"
+            android:src="@drawable/undraw_wall_post"
+            android:layout_height="match_parent"/>
+    <View
+            android:layout_below="@id/navSettings"
+            android:layout_width="match_parent"
+            android:background="#423B3E47"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_below="@id/navSettings"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/account"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                style="@style/customBoldCoiny"
+                android:textColor="@color/appMainColor"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_app_colorr_settings"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:padding="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_gradient_border_white"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:src="@drawable/ic_person_white_24dp"
+                        android:layout_height="20dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="@string/update_name"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/settingName"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/silver"
+                        tools:text="Hello World"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_app_colorr_settings"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:padding="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_gradient_border_white"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:src="@drawable/ic_email_white_24dp"
+                        android:layout_height="20dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="@string/update_email_address"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/settingEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/silver"
+                        tools:text="hfhhf@gmail.com"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_app_colorr_settings"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:padding="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_gradient_border_white"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:src="@drawable/ic_lock_white_24dp"
+                        android:layout_height="20dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="Change Password"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

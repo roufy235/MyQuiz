@@ -1,0 +1,84 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/appMainColor</item>
+        <item name="colorPrimaryDark">@color/appMainColor</item>
+        <item name="colorAccent">@color/white</item>
+
+        <item name="android:textViewStyle">@style/Loral</item>
+        <item name="buttonStyle">@style/LoralButtonStyle</item>
+        <item name="editTextStyle">@style/LoralEditText</item>
+
+    </style>
+
+
+    <style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogSpotColor">@color/white</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+
+
+    <style name="LoralButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/genbkbasr</item>
+        <item name="fontFamily">@font/genbkbasr</item>
+    </style>
+
+    <style name="LoralEditText" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/genbkbasr</item>
+        <item name="fontFamily">@font/genbkbasr</item>
+    </style>
+
+    <style name="Loral" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/genbkbasr</item>
+        <item name="fontFamily">@font/genbkbasr</item>
+    </style>
+
+
+    <style name="coinyButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/genbkbasr</item>
+        <item name="fontFamily">@font/genbkbasr</item>
+    </style>
+
+    <style name="coinyEditText" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/coiny_regular</item>
+        <item name="fontFamily">@font/coiny_regular</item>
+    </style>
+
+
+
+    <style name="coiny" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/coiny_regular</item>
+        <item name="fontFamily">@font/coiny_regular</item>
+    </style>
+
+    <style name="customBoldCoiny" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/coiny_regular</item>
+        <item name="fontFamily">@font/coiny_regular</item>
+    </style>
+    <style name="customItalicsCoiny" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/genbkbasitalics</item>
+        <item name="fontFamily">@font/genbkbasitalics</item>
+    </style>
+
+    <style name="AlertDialogThemeCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/appMainColor</item>
+        <item name="android:fontFamily">@font/coiny_regular</item>
+        <item name="fontFamily">@font/coiny_regular</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/appMainColor</item>
+    </style>
+
+</resources>

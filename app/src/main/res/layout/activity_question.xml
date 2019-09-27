@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".controllers.QuestionActivity">
+
+
+    <RelativeLayout
+            android:id="@+id/navQuestion"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageButton
+                android:id="@+id/backBtn"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="navQuestionGoBack"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/rounded_app_colorr"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/questCat"
+                android:layout_toEndOf="@id/backBtn"
+                android:layout_toStartOf="@id/quizCounterText"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                tools:text="Art and Literature"
+                android:textColor="@color/appMainColor"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                style="@style/customBoldCoiny"
+                android:layout_height="wrap_content"/>
+
+
+        <TextView
+                android:id="@+id/quizCounterText"
+                android:layout_width="wrap_content"
+                android:background="@drawable/rounded_app_colorr"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:padding="7dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="1/10"
+                android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/quizLayout"
+            android:visibility="gone"
+            android:layout_below="@id/navQuestion"
+            android:layout_height="match_parent">
+        <com.github.florent37.shapeofview.shapes.ArcView
+
+                android:layout_width="match_parent"
+                android:id="@+id/curve"
+                android:layout_height="wrap_content"
+                app:shape_arc_height="50dp"
+                app:shape_arc_cropDirection="outside"
+                app:shape_arc_position="bottom">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:minHeight="200dp"
+                    android:background="@color/appMainColor"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/questDashText"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="50dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        tools:text="Who wrote Twilight series of novels?"
+                        android:layout_height="match_parent" android:textAlignment="center"/>
+
+
+            </LinearLayout>
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/timerCard"
+                android:layout_below="@id/curve"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dp"
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="60dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="20dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/timerText"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/red"
+                    tools:text="2 : 40"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    style="@style/customBoldCoiny"
+                    android:layout_height="wrap_content"/>
+
+        </android.support.v7.widget.CardView>
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_below="@id/timerCard"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/cardA"
+                        android:layout_width="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="15dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardUseCompatPadding="true"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:onClick="optionAClicked"
+                            android:focusable="true"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/cardAText"
+                                android:layout_width="wrap_content"
+                                style="@style/customItalicsCoiny"
+                                tools:text="Bill Gates"
+                                android:layout_margin="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/cardB"
+                        android:layout_width="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="15dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardUseCompatPadding="true"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="optionBClicked"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/cardBText"
+                                android:layout_width="wrap_content"
+                                style="@style/customItalicsCoiny"
+                                tools:text="Stephenie Meyer"
+                                android:layout_margin="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/cardC"
+                        android:layout_width="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="15dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardUseCompatPadding="true"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:onClick="optionCClicked"
+                            android:focusable="true"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/cardCText"
+                                android:layout_width="wrap_content"
+                                style="@style/customItalicsCoiny"
+                                tools:text="Steve Jobs"
+                                android:layout_margin="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/cardD"
+                        android:layout_width="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="15dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardUseCompatPadding="true"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="optionDClicked"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/cardDText"
+                                android:layout_width="wrap_content"
+                                style="@style/customItalicsCoiny"
+                                tools:text="James Gosling"
+                                android:layout_margin="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:indeterminateTint="@color/white"
+            android:layout_width="wrap_content"
+            android:background="@drawable/rounded_app_color_circular"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar2"/>
+
+    <TextView
+            android:id="@+id/progressbarText"
+            android:layout_width="wrap_content"
+            android:text="@string/please_wait_while_we_set_up_your_questions"
+            android:layout_below="@id/progressBar2"
+            android:layout_centerHorizontal="true"
+            style="@style/customItalicsCoiny"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/emptyBox"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/undraw_empty"
+            android:layout_centerVertical="true"
+            android:layout_height="300dp"/>
+
+    <TextView
+            android:id="@+id/emptyText"
+            android:layout_width="wrap_content"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:text="@string/there_s_no_questions_for_this_section_at_the_moment_try_again_later"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/emptyBox"
+            style="@style/customBoldCoiny"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackLight"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+
+
+</RelativeLayout>

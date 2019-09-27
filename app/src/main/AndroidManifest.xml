@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.myquiz.www">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:usesCleartextTraffic="true"
+            android:theme="@style/AppTheme">
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="ca-app-pub-4245492336540799~7035199291"/>
+
+
+        <activity
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+                android:name=".controllers.QuestionActivity">
+        </activity>
+        <activity
+                android:name=".controllers.SettingsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+        <activity
+                android:name=".controllers.EarnCoinActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+        <activity
+                android:name=".controllers.SignUpActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+        <activity
+                android:name=".controllers.WelcomeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".controllers.SignInActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+        <activity
+                android:name=".controllers.MainActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/appMainColor"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:layout_height="match_parent">
+
+    <ImageButton
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/closeDrawer"
+            android:layout_width="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_clear_app_color_24dp"
+            android:background="@drawable/rounded_app_colorr_white"
+            android:layout_height="30dp"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/nav_profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/undraw_profile_pic"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/appMainColor"/>
+    
+    <TextView
+            android:id="@+id/navProfileName"
+            android:layout_width="wrap_content"
+            tools:text="Hello World"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/nav_profile_image"
+            style="@style/customBoldCoiny"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@id/navProfileName"
+            android:layout_above="@id/navButtons"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_app_colorr_silver"
+                    android:layout_height="wrap_content">
+
+                <ImageButton
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_app_colorr_menu"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_menu_white_24dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Quizzes"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="17sp"
+                        android:layout_marginStart="8dp"
+                        style="@style/customItalicsCoiny"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_app_colorr_silver"
+                    android:layout_height="wrap_content">
+
+                <ImageButton
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_app_colorr_menu"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_chat_white_24dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="My Chats"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="17sp"
+                        android:layout_marginStart="8dp"
+                        style="@style/customItalicsCoiny"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_app_colorr_silver"
+                    android:layout_height="wrap_content">
+
+                <ImageButton
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_app_colorr_menu"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_notifications_white_24dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Notifications"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="17sp"
+                        android:layout_marginStart="8dp"
+                        style="@style/customItalicsCoiny"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="earnCoinLayoutClicked"
+                    android:paddingBottom="8dp"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_app_colorr_silver"
+                    android:layout_height="wrap_content">
+
+                <ImageButton
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_app_colorr_menu"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_donut_large_white_24dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Earn Coins"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="17sp"
+                        android:layout_marginStart="8dp"
+                        style="@style/customItalicsCoiny"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+            android:id="@+id/navButtons"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="settings"
+                android:layout_height="50dp">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_toStartOf="@id/settings"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_settings_white_24dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/settings"
+                    android:layout_width="wrap_content"
+                    android:text="Settings"
+                    android:textStyle="bold"
+                    style="@style/customItalicsCoiny"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <View
+                android:layout_width="0.5dp"
+                android:background="@color/silver"
+                android:layout_margin="8dp"
+                android:layout_height="match_parent" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="logout"
+                android:focusable="true"
+                android:layout_height="50dp">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_toStartOf="@id/logout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_remove_circle_outline_white_24dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:text="Log Out"
+                    style="@style/customItalicsCoiny"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

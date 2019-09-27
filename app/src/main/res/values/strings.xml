@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">MyQuiz</string>
+    
+    <string name="adMobAppId">ca-app-pub-4245492336540799~7035199291</string>
+    <string name="bannerAdsUnit">ca-app-pub-4245492336540799/3411649056</string>
+    <string name="Interstitial_add_unit">ca-app-pub-4245492336540799/6125388408</string>
+
+    <string name="my_quiz_app">My Quiz App</string>
+    <string name="create_account_with_gmail">Create account with gmail</string>
+    <string name="create_account">Create Account</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="username">Name</string>
+    <string name="create_account_to_continue">Create account to continue</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="login">Login</string>
+    <string name="login_with_gmail">Login with gmail</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="account">Account</string>
+    <string name="update_email_address">Update Email Address</string>
+    <string name="earn_coins">Earn Coins</string>
+    <string name="watch_ad">Watch AD</string>
+    <string name="_50_coins">+50 Coins</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="buy_coins">Buy Coins</string>
+    <string name="settings">Settings</string>
+    <string name="update_name">Update Name</string>
+    <string name="choose_your_path">Choose Your Path</string>
+    <string name="art_and_literature">Art and Literature</string>
+    <string name="history">History</string>
+    <string name="general_knowledge">General Knowledge</string>
+    <string name="music">Music</string>
+    <string name="science_and_nature">Science and Nature</string>
+    <string name="sport">Sport</string>
+    <string name="tv_and_films">TV and Films</string>
+    <string name="geography">Geography</string>
+    <string name="computer_trivia">Computer Trivia</string>
+    <string name="please_wait_while_we_set_up_your_questions">Please wait while we set up your questions</string>
+    <string name="there_s_no_questions_for_this_section_at_the_moment_try_again_later">
+        There are no questions for this section at the moment, try again later.
+    </string>
+</resources>

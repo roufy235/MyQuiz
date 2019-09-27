@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/main_layoutS"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".controllers.SignInActivity">
+
+
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/undraw_questions"
+            android:layout_height="match_parent"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:background="@color/appMainColor"
+            android:alpha="0.9"
+            android:layout_height="match_parent" />
+
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/rounded_app_color_circular"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarSignIn"/>
+
+    <ImageButton
+            android:id="@+id/signUpBtn"
+            android:onClick="createAccountBtnClicked"
+            android:layout_width="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_app_colorr"
+            android:src="@drawable/ic_person_add_white_24dp"
+            android:layout_height="50dp"/>
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/appIconCard"
+            app:cardElevation="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/appMainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/appIcon"
+                android:layout_width="60dp"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/app_icon"
+                android:layout_height="60dp"/>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <TextView
+            android:id="@+id/quizApp"
+            android:layout_below="@id/appIconCard"
+            android:layout_width="wrap_content"
+            android:text="@string/my_quiz_app"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            style="@style/customBoldCoiny"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/loginToContinue"
+            android:layout_below="@id/quizApp"
+            android:layout_width="wrap_content"
+            android:text="@string/login_to_continue"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/appMainColor"
+            style="@style/customItalicsCoiny"
+            android:layout_height="wrap_content"/>
+
+    <ScrollView
+            android:layout_below="@id/loginToContinue"
+            android:layout_width="match_parent"
+            android:layout_above="@id/gmailLoginLayout"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/email"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    style="@style/customBoldCoiny"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:ems="10"
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/logEmail"
+                    android:layout_weight="1"
+                    tools:targetApi="lollipop"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/password"
+                    android:textColor="@color/white"
+                    style="@style/customBoldCoiny"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColorHint="@color/white"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:id="@+id/logPassword"
+                    android:layout_weight="1"
+                    tools:targetApi="lollipop"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/forgot_password"
+                    style="@style/customItalicsCoiny"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:text="@string/login"
+                    android:id="@+id/loginBtnClicked"
+                    android:onClick="loginBtnClickedBtn"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_margin="40dp"
+                    android:background="@drawable/rounded_white_border"
+                    android:layout_height="40dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+            android:id="@+id/gmailLoginLayout"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:onClick="gmailLoginLayoutClicked"
+            android:focusable="true"
+            android:background="@color/appMainColor"
+            android:layout_alignParentBottom="true"
+            android:layout_height="40dp">
+
+        <ImageView
+
+                android:layout_width="18dp"
+                android:src="@drawable/gmail"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/loginWithGmail"
+                android:layout_height="18dp"/>
+
+        <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/loginWithGmail"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:text="@string/login_with_gmail"
+                android:textColor="@color/white"
+                style="@style/customItalicsCoiny"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
